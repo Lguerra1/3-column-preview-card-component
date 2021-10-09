@@ -1,0 +1,134 @@
+@import "./fonts.scss";
+
+// font-family: 'Big Shoulders Display', cursive;
+// font-family: 'Lexend Deca', sans-serif;
+
+// ## Colors
+
+:root {
+  // ### Primary
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  // ### Neutral
+  --transparent-white: hsla(0, 0%, 100%, 0.75); //(paragraphs)
+  --very-light-gray: hsl(0, 0%, 95%); //(background, headings, buttons)
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem = 10px;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  max-width: 75rem;
+  border-radius: 10px;
+
+  display: flex;
+  overflow: hidden;
+}
+
+.card {
+  padding: 0 2.7rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--transparent-white);
+}
+
+img {
+  height: 3rem;
+  width: 5rem;
+  margin-top: 3.5rem;
+}
+
+h1 {
+  font-family: "big shoulders display";
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+p {
+  justify-self: start;
+  font-family: "lexend deca";
+  font-size: 1.4rem;
+  line-height: 2.2rem; 
+  font-weight: 400;
+  margin-bottom: 5rem;
+}
+
+button {
+  border-radius: 20px;
+  border: none;
+  width: 10rem;
+  height: 3.3rem;
+  margin-bottom: 3.5rem;
+}
+
+button:hover {
+  background-color: transparent;
+  border: 2px solid var(--transparent-white);
+  color: var(--transparent-white) !important;
+  cursor: pointer;
+}
+
+
+
+.card:nth-child(1) button {
+  color: var(--bright-orange);
+}
+.card:nth-child(2) button {
+  color: var(--dark-cyan);
+}
+.card:nth-child(3) button {
+  color: var(--very-dark-cyan);
+}
+
+.card:nth-child(1) {
+  width: 100%;
+  background-color: var(--bright-orange);
+}
+
+.card:nth-child(2) {
+  width: 100%;
+  background-color: var(--dark-cyan);
+}
+
+.card:nth-child(3) {
+  width: 100%;
+  background-color: var(--very-dark-cyan);
+}
+
+
+@media screen and (max-width: 750px) {
+  .card-container {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 26rem;
+    flex-direction: column;
+  }
+
+  .card {
+    padding: 0 2.5rem;
+  }
+}
